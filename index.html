@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Materi Sekolah SD</title>
-  <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiMSfdDlLIqql0765hs_7Sk8h8gsNCUU4ygVJc-L4mGu_POQLjAtvuJiGNpnFc9SjUD53Hn2PhjR5K9795Av2yDKU15oye46m_shUjfONdBZ36ks6kmD6w7qs_gCOl6o6mNRAZ3pYN4j1_8BV1Cvd7jxY2wU-68Hl_9_QvvV0CQ749mqZsYWvznvoOBfFoM/w200-h200/icon%20cbt.png" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #eee;
-      overflow: hidden; /* Mencegah scroll ganda */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Apps Script Host</title>
+    <style>
+        /* Menghilangkan semua margin dan padding bawaan browser */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden; /* Mencegah double scrollbar dari halaman pembungkus */
+            background-color: #ffffff;
+        }
 
-    .iframe-container {
-      width: 100%;
-      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
-      overflow: hidden;
-    }
-
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+        /* Membuat iframe memenuhi seluruh layar secara absolut */
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="iframe-container">
-    <iframe
-      id="app"
-      src="https://script.google.com/macros/s/AKfycbxLR3dIZFfbn0TWPoYPvLslSuqALYZwtOXSjzEfcNI01A3AGet2rQ8uhCFihOlAn1a3/exec"
-      scrolling="yes"
-      allowfullscreen="true"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      allow="fullscreen; camera; microphone; display-capture; geolocation;">
+
+    <!-- Iframe yang memuat langsung aplikasi Google Apps Script (GAS) -->
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxLR3dIZFfbn0TWPoYPvLslSuqALYZwtOXSjzEfcNI01A3AGet2rQ8uhCFihOlAn1a3/exec" 
+        allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb" 
+        sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-modals"
+    >
+        Browser Anda tidak mendukung iframe. Silakan buka tautan secara langsung.
     </iframe>
-  </div>
+
 </body>
 </html>
